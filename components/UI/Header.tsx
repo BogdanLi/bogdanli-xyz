@@ -35,7 +35,7 @@ const Header = () => {
       <div className="hidden border-s border-lines lg:block">
         <NavLink label="_contact-me" href="/contact" />
       </div>
-      <button className="p-4">
+      <button className="p-4 lg:hidden">
         <Image src={menu.src} width={16} height={16} alt="burger" />
       </button>
     </header>
