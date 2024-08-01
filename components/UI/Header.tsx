@@ -2,6 +2,7 @@ import Image from "next/image";
 import { NavLink } from "./Buttons";
 
 import menu from "@/assets/icons/burger.svg";
+import MobileSidebar from "./MobileSidebar";
 
 const links = [
   {
