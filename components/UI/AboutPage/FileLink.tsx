@@ -18,7 +18,7 @@ const FileLink = ({ href, label }: Props) => {
   const [img, setImg] = useState("");
 
   return (
-    <Link href={href} className="flex items-center gap-2 py-2">
+    <Link href={href} className="flex items-center gap-2 py-2 ps-5">
       <Image
         src={label.endsWith(".tsx") ? tsx : js}
         alt=""

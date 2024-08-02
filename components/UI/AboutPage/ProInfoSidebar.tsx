@@ -12,13 +12,16 @@ import FileLink from "./FileLink";
 const ProfessionalInfoSidebar = () => {
   return (
     <div className="h-full border-e border-lines">
-      <FolderDropdown label="Personal info">
+      <FolderDropdown label="Professional info">
         <div className="space-y-2 py-4">
           <FolderLink folderIcon={greenFolder.src} label="bio">
-            <FileLink label="me.tsx" href="" />
+            <FileLink label="me.tsx" href="/about/professional-info/me" />
           </FolderLink>
-          <FolderLink folderIcon={folder.src} label="education">
-            <FileLink label="school.js" href="" />
+          <FolderLink folderIcon={folder.src} label="workBackground">
+            <FileLink
+              label="history.js"
+              href="/about/professional-info/work-history"
+            />
           </FolderLink>
         </div>
       </FolderDropdown>

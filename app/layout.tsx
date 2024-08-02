@@ -24,7 +24,7 @@ export default function RootLayout({
         <main className="flex h-full flex-col overflow-hidden rounded-lg border border-lines bg-primary-200 lg:justify-between">
           <SidebarStoreProvider>
             <Header />
-            <div className="relative h-full">
+            <div className="relative h-full max-h-full">
               <MobileSidebar />
               {children}
             </div>

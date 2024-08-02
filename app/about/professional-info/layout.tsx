@@ -7,7 +7,7 @@ interface Props {
 
 const ProfessionalInfoLayout = ({ children }: Props) => {
   return (
-    <div className="flex h-full">
+    <div className="flex h-full w-full">
       <ProfessionalInfoSidebar />
       {children}
     </div>

@@ -1,0 +1,44 @@
+"use client";
+
+import Image from "next/image";
+import { ReactNode } from "react";
+
+import close from "@/assets/icons/burger-close.svg";
+import { useRouter } from "next/navigation";
+
+interface Props {
+  children: ReactNode;
+  name: string;
+  lines: number;
+}
+
+const CodeTemplate = ({ children, name, lines }: Props) => {
+  const router = useRouter();
+
+  const handleClose = () => {
+    router.back();
+  };
+
+  return (
+    <div className="h-full w-full overflow-y-scroll">
+      <div className="w-full border-b border-lines">
+        <div className="flex w-fit items-center gap-4 border-e border-lines px-[14px] py-[10px]">
+          {name}
+          <button onClick={handleClose}>
+            <Image src={close.src} width={12} height={12} alt="" />
+          </button>
+        </div>
+      </div>
+      <div className="flex h-auto max-h-full gap-4 px-8 py-4">
+        <div className="h-fit w-fit text-end">
+          {Array.from(Array(lines).keys()).map((el) => (
+            <div key={el}>{el + 1}</div>
+          ))}
+        </div>
+        <div>{children}</div>
+      </div>
+    </div>
+  );
+};
+
+export default CodeTemplate;

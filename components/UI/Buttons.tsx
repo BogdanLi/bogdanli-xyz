@@ -15,8 +15,6 @@ export const NavLink = ({ label, href }: NavLinkProps) => {
 
   const isActive = path.includes(href);
 
-  console.log(`${path} === ${href} => ${isActive}`);
-
   return (
     <Link
       href={href}

@@ -9,7 +9,6 @@ import menuClose from "@/assets/icons/burger-close.svg";
 import { useSidebarStore } from "@/lib/providers/sidebar-store-provider";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 
 const links = [
   {
