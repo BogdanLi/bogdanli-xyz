@@ -21,7 +21,7 @@ const FolderLink = ({ children, folderIcon, label }: Props) => {
   return (
     <div>
       <button
-        className={`flex gap-2 ${active ? "text-white" : ""}`}
+        className={`flex gap-2 py-2 ${active ? "text-white" : ""}`}
         onClick={toggleActive}
       >
         <Image

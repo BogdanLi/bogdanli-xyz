@@ -11,7 +11,7 @@ import FileLink from "./FileLink";
 
 const ProfessionalInfoSidebar = () => {
   return (
-    <div className="h-full border-e border-lines">
+    <div className="hidden h-full border-e border-lines lg:block">
       <FolderDropdown label="Professional info">
         <div className="space-y-2 py-4">
           <FolderLink folderIcon={greenFolder.src} label="bio">

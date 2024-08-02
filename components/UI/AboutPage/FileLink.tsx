@@ -5,14 +5,12 @@ import Link from "next/link";
 
 import js from "@/assets/icons/js.svg";
 import tsx from "@/assets/icons/tsx.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface Props {
   href: string;
   label: string;
 }
-
-const getFormat = (label: string) => {};
 
 const FileLink = ({ href, label }: Props) => {
   const [img, setImg] = useState("");

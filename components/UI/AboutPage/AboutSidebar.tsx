@@ -5,7 +5,7 @@ import { AboutSideLink } from "../Buttons";
 
 const AboutSidebar = () => {
   return (
-    <div className="h-full border-e border-lines">
+    <div className="hidden h-full flex-col border-e border-lines lg:flex">
       <AboutSideLink icon={professional.src} href="/about/professional-info" />
       <AboutSideLink icon={personal.src} href="/about/personal-info" />
       <AboutSideLink icon={hobbies.src} href="/about/hobbies" />
