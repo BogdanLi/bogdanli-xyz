@@ -20,7 +20,7 @@ const CodeTemplate = ({ children, name, lines }: Props) => {
   };
 
   return (
-    <div className="h-full w-full overflow-y-scroll">
+    <div className="h-full w-full">
       <div className="w-full border-b border-lines">
         <div className="flex items-center gap-4 border-e border-lines px-[14px] py-[10px] text-white lg:w-fit lg:text-secondary-100">
           <span className="lg:hidden">{"//"}</span>

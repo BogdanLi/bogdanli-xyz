@@ -11,7 +11,7 @@ import FileLink from "./FileLink";
 
 const ProfessionalInfoSidebar = () => {
   return (
-    <div className="hidden h-full border-e border-lines lg:block">
+    <div className="hidden h-full w-fit border-e border-lines lg:block">
       <FolderDropdown label="Professional info">
         <div className="space-y-2 py-4">
           <FolderLink folderIcon={greenFolder.src} label="bio">
@@ -29,7 +29,7 @@ const ProfessionalInfoSidebar = () => {
         <div className="space-y-2 py-4">
           <Link
             href="mailto:li.bogdan44@gmail.com"
-            className="flex gap-2 hover:brightness-125"
+            className="flex w-full gap-2 pe-12 hover:brightness-125"
           >
             <Image src={mail.src} width={24} height={24} alt="" />
             li.bogdan44@gmail.com

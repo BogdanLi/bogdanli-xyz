@@ -18,9 +18,9 @@ const FolderDropdown = ({ children, label }: Props) => {
   };
 
   return (
-    <div>
+    <div className="w-full">
       <button
-        className="flex gap-2 border-b border-lines px-4 py-[10px] text-white items-center"
+        className="flex items-center gap-2 border-b border-lines px-4 py-[10px] text-white"
         onClick={toggleActive}
       >
         <Image
@@ -33,7 +33,7 @@ const FolderDropdown = ({ children, label }: Props) => {
         {label}
       </button>
       <div
-        className={`flex flex-col overflow-hidden px-[14px] transition-all duration-300 ${active ? "" : "h-0"}`}
+        className={`flex w-fit flex-col overflow-hidden px-[14px] transition-all duration-300 ${active ? "" : "h-0"}`}
       >
         {children}
       </div>
