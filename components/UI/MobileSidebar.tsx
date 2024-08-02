@@ -16,7 +16,7 @@ const MobileSidebar = () => {
   return (
     <div className={className}>
       <div>
-        <MobileNavLink href="/" label="_hello" />
+        <MobileNavLink href="/welcome" label="_hello" />
         <MobileNavLink href="/about" label="_about-me" />
         <MobileNavLink href="/projects" label="_projects" />
         <MobileNavLink href="/contact" label="_contact-me" />
