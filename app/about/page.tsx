@@ -1,9 +1,7 @@
+import { redirect } from "next/navigation";
+
 const AboutPage = () => {
-    return ( 
-        <>
-        About
-        </>
-     );
-}
- 
+  redirect("/about/professional-info");
+};
+
 export default AboutPage;

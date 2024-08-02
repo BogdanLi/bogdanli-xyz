@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
@@ -12,7 +13,9 @@ interface NavLinkProps {
 export const NavLink = ({ label, href }: NavLinkProps) => {
   const path = usePathname();
 
-  const isActive = path === href;
+  const isActive = path.includes(href);
+
+  console.log(`${path} === ${href} => ${isActive}`);
 
   return (
     <Link
@@ -52,6 +55,26 @@ export const MobileNavLink = ({ href, label }: MobileNavLinkProps) => {
   return (
     <Link className="block border-b border-lines p-4" href={href}>
       {label}
+    </Link>
+  );
+};
+
+interface AboutSideLinkProps {
+  href: string;
+  icon: string;
+}
+
+export const AboutSideLink = ({ href, icon }: AboutSideLinkProps) => {
+  const path = usePathname();
+
+  const isActive = href.includes(path);
+
+  return (
+    <Link
+      href={href}
+      className={`block px-5 py-4 ${isActive ? "brightness-125" : ""}`}
+    >
+      <Image src={icon} width={24} height={24} alt="" />
     </Link>
   );
 };

@@ -9,12 +9,13 @@ import menuClose from "@/assets/icons/burger-close.svg";
 import { useSidebarStore } from "@/lib/providers/sidebar-store-provider";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const links = [
   {
     id: 2,
     label: "_hello",
-    href: "/",
+    href: "/welcome",
   },
   {
     id: 3,
@@ -47,7 +48,7 @@ const Header = () => {
   return (
     <header className="flex justify-between border-b border-lines text-secondary-100">
       <div className="flex">
-        <NavLink label="Bogdan Li" href="" />
+        <div className="block border-e border-lines px-8 py-4">Bogdan Li</div>
         <div className="hidden lg:flex">
           {links.map((link) => (
             <NavLink key={link.id} {...link} />
