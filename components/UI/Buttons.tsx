@@ -42,3 +42,16 @@ export const FooterLink = ({ href, children }: FooterLinkProps) => {
     </Link>
   );
 };
+
+interface MobileNavLinkProps {
+  href: string;
+  label: string;
+}
+
+export const MobileNavLink = ({ href, label }: MobileNavLinkProps) => {
+  return (
+    <Link className="block border-b border-lines p-4" href={href}>
+      {label}
+    </Link>
+  );
+};

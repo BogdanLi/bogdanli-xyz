@@ -11,15 +11,15 @@ const HomePage = () => {
           color="#43d9ad"
           bgColor="transparent"
           start={0}
-          end={50}
+          end={70}
           className="-top-[12%] end-1/4 z-10 h-96 w-96"
         />
         <RadialGradient
           color="#C98BDF"
           bgColor="transparent"
           start={0}
-          end={50}
-          className="-end-1/3 z-10 h-96 w-96 lg:bottom-0 lg:end-32"
+          end={70}
+          className="-end-1/2 z-10 h-96 w-96 lg:bottom-0 lg:end-32"
         />
         <div className="z-10 space-y-12">
           <div>

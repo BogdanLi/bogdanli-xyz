@@ -1,8 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { NavLink } from "./Buttons";
 
 import menu from "@/assets/icons/burger.svg";
-import MobileSidebar from "./MobileSidebar";
+import menuClose from "@/assets/icons/burger-close.svg";
+
+import { useSidebarStore } from "@/lib/providers/sidebar-store-provider";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const links = [
   {
@@ -23,6 +29,21 @@ const links = [
 ];
 
 const Header = () => {
+  const { show, open, close } = useSidebarStore((state) => state);
+  const path = usePathname();
+
+  const handleClick = () => {
+    if (show) {
+      void close();
+    } else {
+      void open();
+    }
+  };
+
+  useEffect(() => {
+    if (show) close();
+  }, [path]);
+
   return (
     <header className="flex justify-between border-b border-lines text-secondary-100">
       <div className="flex">
@@ -36,8 +57,13 @@ const Header = () => {
       <div className="hidden border-s border-lines lg:block">
         <NavLink label="_contact-me" href="/contact" />
       </div>
-      <button className="p-4 lg:hidden">
-        <Image src={menu.src} width={16} height={16} alt="burger" />
+      <button className="p-4 lg:hidden" onClick={handleClick}>
+        <Image
+          src={show ? menuClose.src : menu.src}
+          width={16}
+          height={16}
+          alt="burger"
+        />
       </button>
     </header>
   );
