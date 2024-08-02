@@ -36,7 +36,7 @@ const CodeTemplate = ({ children, name, lines }: Props) => {
             <div key={el}>{el + 1}</div>
           ))}
         </div>
-        <div className="py-4">{children}</div>
+        <div className="pb-4">{children}</div>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const FolderDropdown = ({ children, label }: Props) => {
   return (
     <div>
       <button
-        className="flex gap-2 border-b border-lines px-4 py-[10px] text-white"
+        className="flex gap-2 border-b border-lines px-4 py-[10px] text-white items-center"
         onClick={toggleActive}
       >
         <Image
