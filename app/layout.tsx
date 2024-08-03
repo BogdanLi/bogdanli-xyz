@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
+import { Fira_Code, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/UI/Header";
 import Footer from "@/components/UI/Footer";
 import MobileSidebar from "@/components/UI/MobileSidebar";
 import { SidebarStoreProvider } from "@/lib/providers/sidebar-store-provider";
 
-const fira = Fira_Code({ subsets: ["latin"] });
+const fira = Fira_Code({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Bogdan Li",
