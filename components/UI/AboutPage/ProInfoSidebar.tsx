@@ -12,7 +12,7 @@ import FileLink from "./FileLink";
 const ProfessionalInfoSidebar = () => {
   return (
     <div className="hidden h-full w-fit border-e border-lines lg:block">
-      <FolderDropdown label="Professional info">
+      <FolderDropdown label="professional-info">
         <div className="space-y-2 py-4">
           <FolderLink folderIcon={greenFolder.src} label="bio">
             <FileLink label="me.tsx" href="/about/professional-info/me" />
@@ -23,9 +23,12 @@ const ProfessionalInfoSidebar = () => {
               href="/about/professional-info/work-history"
             />
           </FolderLink>
+          <FolderLink folderIcon={folder.src} label="stack">
+            <FileLink label="stack.tsx" href="" />
+          </FolderLink>
         </div>
       </FolderDropdown>
-      <FolderDropdown label="Contacts">
+      <FolderDropdown label="contacts">
         <div className="space-y-2 py-4">
           <Link
             href="mailto:li.bogdan44@gmail.com"

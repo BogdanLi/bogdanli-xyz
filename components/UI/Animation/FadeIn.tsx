@@ -20,7 +20,12 @@ const container: Variants = {
 
 const FadeIn = ({ children }: Props) => {
   return (
-    <motion.div variants={container} initial="hidden" animate="show">
+    <motion.div
+      variants={container}
+      className="h-fit"
+      initial="hidden"
+      animate="show"
+    >
       {children}
     </motion.div>
   );

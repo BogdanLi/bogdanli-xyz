@@ -5,3 +5,12 @@
 .gradient {
   background: radial-gradient(circle, #43d9ad 0%, #011627 50%);
 }
+
+.no-drag {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

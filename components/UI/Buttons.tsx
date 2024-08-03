@@ -18,8 +18,8 @@ export const NavLink = ({ label, href }: NavLinkProps) => {
   return (
     <Link
       href={href}
-      className={`block border-e border-lines px-8 py-4 ${
-        isActive ? "border-b-4 border-b-accent-100 text-white" : ""
+      className={`block border-e border-lines px-8 py-4 transition-all duration-100 ${
+        isActive ? "border-b-2 border-b-accent-100 text-white" : ""
       } `}
     >
       {label}

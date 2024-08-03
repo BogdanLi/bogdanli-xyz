@@ -5,6 +5,7 @@ import RadialGradient from "@/components/UI/RadialGradient";
 import Link from "next/link";
 import FadeIn from "@/components/UI/Animation/FadeIn";
 import FadeInStagger from "@/components/UI/Animation/FadeInStagger";
+import Draggable from "@/components/UI/Animation/Dragabble";
 
 const HomePage = () => {
   return (
@@ -62,14 +63,19 @@ const HomePage = () => {
           </FadeIn>
         </div>
         <div className="z-10 hidden lg:block">
-          <Image
-            src={profile.src}
-            alt=""
-            priority
-            width={300}
-            height={0}
-            className="rounded-full"
-          />
+          <Draggable>
+            <FadeIn>
+              <Image
+                src={profile.src}
+                alt=""
+                priority
+                width={300}
+                height={0}
+                draggable={false}
+                className="no-drag rounded-full"
+              />
+            </FadeIn>
+          </Draggable>
         </div>
       </section>
     </>

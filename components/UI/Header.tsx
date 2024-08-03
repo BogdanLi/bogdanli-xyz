@@ -9,6 +9,8 @@ import menuClose from "@/assets/icons/burger-close.svg";
 import { useSidebarStore } from "@/lib/providers/sidebar-store-provider";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import FadeIn from "./Animation/FadeIn";
+import FadeInStagger from "./Animation/FadeInStagger";
 
 const links = [
   {
@@ -45,27 +47,31 @@ const Header = () => {
   }, [path]);
 
   return (
-    <header className="flex justify-between border-b border-lines text-secondary-100">
-      <div className="flex">
-        <div className="block border-e border-lines px-8 py-4">Bogdan Li</div>
-        <div className="hidden lg:flex">
-          {links.map((link) => (
-            <NavLink key={link.id} {...link} />
-          ))}
+    <FadeIn>
+      <header className="flex justify-between border-b border-lines text-secondary-100">
+        <div className="flex">
+          <div className="block border-e border-lines px-8 py-4">Bogdan Li</div>
+          <div className="hidden lg:flex">
+            {links.map((link) => (
+              <FadeInStagger key={link.id}>
+                <NavLink {...link} />
+              </FadeInStagger>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="hidden border-s border-lines lg:block">
-        <NavLink label="_contact-me" href="/contact" />
-      </div>
-      <button className="p-4 lg:hidden" onClick={handleClick}>
-        <Image
-          src={show ? menuClose.src : menu.src}
-          width={16}
-          height={16}
-          alt="burger"
-        />
-      </button>
-    </header>
+        <div className="hidden border-s border-lines lg:block">
+          <NavLink label="_contact-me" href="/contact" />
+        </div>
+        <button className="p-4 lg:hidden" onClick={handleClick}>
+          <Image
+            src={show ? menuClose.src : menu.src}
+            width={16}
+            height={16}
+            alt="burger"
+          />
+        </button>
+      </header>
+    </FadeIn>
   );
 };
 

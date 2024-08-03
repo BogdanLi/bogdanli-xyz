@@ -7,6 +7,8 @@ import linkedin from "@/assets/icons/linkedin.svg";
 import instagram from "@/assets/icons/instagram.svg";
 import telegram from "@/assets/icons/telegram.svg";
 import { useSidebarStore } from "@/lib/providers/sidebar-store-provider";
+import FadeIn from "./Animation/FadeIn";
+import FadeInStagger from "./Animation/FadeInStagger";
 
 const MobileSidebar = () => {
   const { show } = useSidebarStore((state) => state);

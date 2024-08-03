@@ -8,7 +8,7 @@ import folderGreen from "@/assets/icons/green-folder.svg";
 const AboutMobileSidebar = () => {
   return (
     <div className="flex w-full flex-col lg:hidden">
-      <FolderDropdown label="personal-info">
+      <FolderDropdown label="professional-info">
         <FolderLink folderIcon={folder.src} label="bio">
           <FileLink label="me.tsx" href="/about/professional-info/me" />
         </FolderLink>

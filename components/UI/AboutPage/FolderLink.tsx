@@ -35,7 +35,7 @@ const FolderLink = ({ children, folderIcon, label }: Props) => {
         {label}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-150 ${active ? "h-auto" : "h-0"}`}
+        className={`overflow-hidden transition-all duration-300 ${active ? "max-h-96" : "max-h-0"}`}
       >
         {children}
       </div>

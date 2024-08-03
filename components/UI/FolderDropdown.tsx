@@ -13,6 +13,8 @@ interface Props {
 const FolderDropdown = ({ children, label }: Props) => {
   const [active, setActive] = useState(false);
 
+  const className = `flex w-full flex-col overflow-hidden px-[14px] transition-all duration-300 ${active ? "max-h-96" : "max-h-0"}`;
+
   const toggleActive = () => {
     setActive(!active);
   };
@@ -20,7 +22,7 @@ const FolderDropdown = ({ children, label }: Props) => {
   return (
     <div className="w-full">
       <button
-        className="flex items-center gap-2 border-b border-lines px-4 py-[10px] text-white"
+        className="flex w-full items-center gap-2 border-b border-lines px-4 py-[10px] text-white"
         onClick={toggleActive}
       >
         <Image
@@ -32,11 +34,7 @@ const FolderDropdown = ({ children, label }: Props) => {
         />{" "}
         {label}
       </button>
-      <div
-        className={`flex w-fit flex-col overflow-hidden px-[14px] transition-all duration-300 ${active ? "" : "h-0"}`}
-      >
-        {children}
-      </div>
+      <div className={className}>{children}</div>
     </div>
   );
 };
