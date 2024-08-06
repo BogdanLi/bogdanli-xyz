@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fira.className}>
-      <body className="relative h-screen bg-primary-100 p-4 lg:p-16">
+      <body className="relative min-h-screen bg-primary-100 p-4 lg:h-screen lg:min-h-0 lg:p-16">
         <main className="flex h-full flex-col overflow-hidden rounded-lg border border-lines bg-primary-200 lg:justify-between">
           <SidebarStoreProvider>
             <Header />
