@@ -1,8 +1,13 @@
+import CodeTemplate from "@/components/Templates/CodeTemplate";
+import ContactForm from "@/components/UI/ContactPage/Form";
+
 const ContactPage = () => {
   return (
-    <>
-      <h1>Contact</h1>
-    </>
+    <div className="h-full w-full">
+      <CodeTemplate name="contacts" lines={0}>
+        <ContactForm />
+      </CodeTemplate>
+    </div>
   );
 };
 
