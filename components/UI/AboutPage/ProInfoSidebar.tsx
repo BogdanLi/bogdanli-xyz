@@ -24,7 +24,7 @@ const ProfessionalInfoSidebar = () => {
             />
           </FolderLink>
           <FolderLink folderIcon={folder.src} label="stack">
-            <FileLink label="stack.tsx" href="" />
+            <FileLink label="stack.tsx" href="/about/professional-info/stack" />
           </FolderLink>
         </div>
       </FolderDropdown>

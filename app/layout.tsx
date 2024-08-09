@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={fira.className}>
       <body className="relative min-h-screen bg-primary-100 p-4 lg:h-screen lg:min-h-0 lg:p-16">
-        <main className="flex h-full flex-col overflow-hidden rounded-lg border border-lines bg-primary-200 lg:justify-between">
+        <main className="flex h-screen flex-col overflow-y-scroll rounded-lg border border-lines bg-primary-200 lg:h-full lg:justify-between lg:overflow-y-hidden">
           <SidebarStoreProvider>
             <Header />
             <div className="relative h-full max-h-full">
