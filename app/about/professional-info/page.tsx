@@ -1,4 +1,4 @@
-import CodeTemplate from "@/components/Templates/CodeTemplate";
+import CodeTemplate from "components/Templates/CodeTemplate";
 
 const AboutProfessionalInfoPage = () => {
   return (

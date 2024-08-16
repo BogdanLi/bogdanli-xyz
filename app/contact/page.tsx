@@ -1,6 +1,6 @@
-import CodeTemplate from "@/components/Templates/CodeTemplate";
-import FadeIn from "@/components/UI/Animation/FadeIn";
-import ContactForm from "@/components/UI/ContactPage/Form";
+import CodeTemplate from "components/Templates/CodeTemplate";
+import FadeIn from "components/UI/Animation/FadeIn";
+import ContactForm from "components/UI/ContactPage/Form";
 
 const ContactPage = () => {
   return (

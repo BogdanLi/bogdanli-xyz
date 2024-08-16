@@ -1,6 +1,6 @@
-import CodeTemplate from "@/components/Templates/CodeTemplate";
+import CodeTemplate from "components/Templates/CodeTemplate";
 
-const AboutMePage = () => {
+const ProfessionalMePage = () => {
   return (
     <div className="h-full w-full">
       <CodeTemplate lines={12} name="me.tsx">
@@ -72,4 +72,4 @@ const AboutMePage = () => {
   );
 };
 
-export default AboutMePage;
+export default ProfessionalMePage;

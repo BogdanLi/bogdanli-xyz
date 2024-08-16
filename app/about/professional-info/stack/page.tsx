@@ -21,6 +21,7 @@ const StackPage = () => {
           </ArrayMarkdown>
           ;
         </p>
+        <br />
         <p>
           <KeywordMarkdown>let</KeywordMarkdown>{" "}
           <NameMarkdown>frontEndTechnologies</NameMarkdown> ={" "}
@@ -31,9 +32,10 @@ const StackPage = () => {
           </ArrayMarkdown>
           ;
         </p>
+        <br />
         <p>
           <KeywordMarkdown>let</KeywordMarkdown>{" "}
-          <NameMarkdown>librariesAndTools</NameMarkdown> ={" "}
+          <NameMarkdown>librariesAndTools</NameMarkdown> = <br />
           <ArrayMarkdown>
             [<StringMarkdown>Redux Toolkit</StringMarkdown>,{" "}
             <StringMarkdown>Zustand</StringMarkdown>,{" "}
@@ -46,8 +48,7 @@ const StackPage = () => {
             <StringMarkdown>react-i18next</StringMarkdown>,{" "}
             <StringMarkdown>next-intl</StringMarkdown>,{" "}
             <StringMarkdown>swiper.js</StringMarkdown>,{" "}
-            <StringMarkdown>react-hot-toast</StringMarkdown>,{" "}
-            <StringMarkdown>react-router</StringMarkdown>]
+            <StringMarkdown>react-hot-toast</StringMarkdown>]
           </ArrayMarkdown>
           ;
         </p>
