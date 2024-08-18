@@ -39,6 +39,7 @@ const ContactForm = () => {
     } else {
       setStatus("error");
       setShowModal(true);
+      console.error("Failed to send email");
     }
   };
 
