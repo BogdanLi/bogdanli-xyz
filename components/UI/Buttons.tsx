@@ -76,3 +76,27 @@ export const AboutSideLink = ({ href, icon }: AboutSideLinkProps) => {
     </Link>
   );
 };
+
+interface ButtonProps {
+  children: ReactNode;
+  disabled?: boolean;
+  onClick?: () => void;
+  className?: string;
+}
+
+export const Button = ({
+  children,
+  disabled = false,
+  onClick,
+  className = "",
+}: ButtonProps) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-lg bg-lines px-3 py-2 text-white ${className}`}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+};
