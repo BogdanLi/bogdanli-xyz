@@ -13,22 +13,13 @@ import folder from "assets/icons/folder.svg";
 import greenFolder from "assets/icons/green-folder.svg";
 import purpleFolder from "assets/icons/purple-folder.svg";
 
-const ProfessionalInfoSidebar = () => {
+const HobbiesSidebar = () => {
   return (
     <div className="hidden h-full w-fit border-e border-lines lg:block">
-      <FolderDropdown label="professional-info">
+      <FolderDropdown label="interests">
         <div className="space-y-2 py-4">
-          <FolderLink folderIcon={greenFolder.src} label="bio">
-            <FileLink label="me.tsx" href="/about/professional-info/me" />
-          </FolderLink>
-          <FolderLink folderIcon={folder.src} label="workBackground">
-            <FileLink
-              label="history.js"
-              href="/about/professional-info/work-history"
-            />
-          </FolderLink>
-          <FolderLink folderIcon={purpleFolder.src} label="stack">
-            <FileLink label="stack.tsx" href="/about/professional-info/stack" />
+          <FolderLink folderIcon={greenFolder.src} label="anime">
+            <FileLink label="anime.tsx" href="/about/hobbies/anime" />
           </FolderLink>
         </div>
       </FolderDropdown>
@@ -54,4 +45,4 @@ const ProfessionalInfoSidebar = () => {
   );
 };
 
-export default ProfessionalInfoSidebar;
+export default HobbiesSidebar;

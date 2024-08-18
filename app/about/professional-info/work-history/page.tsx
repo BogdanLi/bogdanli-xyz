@@ -1,3 +1,9 @@
+import {
+  ArrayMarkdown,
+  KeywordMarkdown,
+  NameMarkdown,
+  StringMarkdown,
+} from "@/components/Markdown/CodeMarkdown";
 import CodeTemplate from "@/components/Templates/CodeTemplate";
 import Link from "next/link";
 
@@ -15,12 +21,31 @@ const WorkHistoryPage = () => {
               skills accelerator Ilmhona;
             </Link>
           </div>
-          <p>const position = &quot;course instructor&quot;;</p>
-          <p>const timePeriod = &quot;may 2023 - present&quot;;</p>
           <p>
-            const coursesITaught = [&quot;Intro to JS&quot;,
-            &quot;React.js&quot;, &quot;Front-end Level 1&quot;, &quot;Website
-            with Tilda&quot;];
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>position</NameMarkdown> ={" "}
+            <StringMarkdown>course instructor</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>type</NameMarkdown> ={" "}
+            <StringMarkdown>part time</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>timePeriod</NameMarkdown> ={" "}
+            <StringMarkdown>may 2023 - present</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>coursesITaught</NameMarkdown> ={" "}
+            <ArrayMarkdown>
+              [<StringMarkdown>Intro to JS</StringMarkdown>,
+              <StringMarkdown>React.js</StringMarkdown>,
+              <StringMarkdown>Front-end Level 1</StringMarkdown>,
+              <StringMarkdown>Website with Tilda</StringMarkdown>]
+            </ArrayMarkdown>
+            ;
           </p>
         </div>
         <div>{"//"}</div>
@@ -34,9 +59,29 @@ const WorkHistoryPage = () => {
               Megafon Tajikistan;
             </Link>
           </div>
-          <p>const position = &quot;course instructor&quot;;</p>
-          <p>const timePeriod = &quot;november 2023 - march 2024&quot;;</p>
-          <p>const coursesITaught = [&quot;Intro to Python&quot;];</p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>position</NameMarkdown> ={" "}
+            <StringMarkdown>course instructor</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>type</NameMarkdown> ={" "}
+            <StringMarkdown>part time</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>timePeriod</NameMarkdown> ={" "}
+            <StringMarkdown>november 2023 - march 2024</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>coursesITaught</NameMarkdown> ={" "}
+            <ArrayMarkdown>
+              [<StringMarkdown>Intro to Python</StringMarkdown>]
+            </ArrayMarkdown>
+            ;
+          </p>
         </div>
         <div>{"//"}</div>
         <div>
@@ -49,8 +94,21 @@ const WorkHistoryPage = () => {
               Livo;
             </Link>
           </div>
-          <p>const position = &quot;front-end developer&quot;;</p>
-          <p>const timePeriod = &quot;january 2024 - present&quot;;</p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>position</NameMarkdown> ={" "}
+            <StringMarkdown>front-end developer</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>type</NameMarkdown> ={" "}
+            <StringMarkdown>full time</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>timePeriod</NameMarkdown> ={" "}
+            <StringMarkdown>january 2024 - present</StringMarkdown>;
+          </p>
         </div>
       </CodeTemplate>
     </div>

@@ -33,6 +33,9 @@ const Footer = () => {
               <Image src={telegram.src} alt="" width={24} height={24} />
             </FadeInStagger>
           </FooterLink>
+          <FooterLink href="https://t.me/licuatroesp">
+            <FadeInStagger>Still in development</FadeInStagger>
+          </FooterLink>
         </div>
         <div>
           <FadeInStagger>
