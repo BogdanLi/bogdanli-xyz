@@ -8,10 +8,11 @@ import Image from "next/image";
 interface Props {
   children: ReactNode;
   label: string;
+  defaultOpen?: boolean;
 }
 
-const FolderDropdown = ({ children, label }: Props) => {
-  const [active, setActive] = useState(false);
+const FolderDropdown = ({ children, label, defaultOpen = false }: Props) => {
+  const [active, setActive] = useState(defaultOpen);
 
   const className = `flex w-full flex-col overflow-hidden px-[14px] transition-all duration-300 ${active ? "max-h-96" : "max-h-0"}`;
 

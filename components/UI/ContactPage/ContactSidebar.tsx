@@ -7,7 +7,7 @@ import phone from "@/assets/icons/phone.svg";
 const ContactSidebar = () => {
   return (
     <div className="hidden h-full w-fit border-e border-lines lg:block">
-      <FolderDropdown label="contacts">
+      <FolderDropdown label="contacts" defaultOpen>
         <div className="space-y-2 py-4">
           <Link
             href="mailto:li.bogdan44@gmail.com"

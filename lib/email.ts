@@ -4,6 +4,7 @@ interface EmailPayload {
   to: string;
   subject: string;
   text: string;
+  html: string;
 }
 
 const transporter = nodemailer.createTransport({

@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   const { to, subject, text, html } = await request.json();
 
   try {
-    await sendEmail({ to, subject, text });
+    await sendEmail({ to, subject, text, html });
     return NextResponse.json(
       { message: "Email sent successfully" },
       { status: 200 },

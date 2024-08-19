@@ -5,8 +5,28 @@ import FormField from "./Input";
 import { FormData, UserSchema } from "@/lib/types/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { Box, Modal, Typography } from "@mui/material";
+import { Box, Modal } from "@mui/material";
 import { Button } from "../Buttons";
+
+const getHtml = (subject: string, text: string, name: string, from: string) => {
+  return `
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Your Email Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <div style="color: '#011627'; border: '1px solid #011627'; border-radius: '24px';">
+      <h2>From: ${name}, Email: ${from}</h2>
+      <h2>Email: ${from}</h2>
+      <h2>Subject: ${subject}</h2>
+      <h2>${text}</h2>
+    </div>
+  </body>
+  `;
+};
 
 const ContactForm = () => {
   const {
@@ -29,6 +49,12 @@ const ContactForm = () => {
         to: "li.bogdan44@gmail.com",
         subject: "Test Email",
         text: `${data.email} \n ${data.message}`,
+        html: getHtml(
+          "Message from Portfolio",
+          data.message,
+          data.name,
+          data.email,
+        ),
       }),
     });
 
@@ -54,17 +80,25 @@ const ContactForm = () => {
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <Box
-          sx={{ bgcolor: "#011627", color: "#607B96", p: 2, borderRadius: 2 }}
+          sx={{
+            bgcolor: "#011627",
+            color: "#607B96",
+            p: 2,
+            borderRadius: 2,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
         >
-          <Typography variant="h4">
+          <h1 className="w-1/2 text-center text-2xl">
             {status === "sent"
               ? "Email sent successfully"
               : status === "error"
                 ? "Error while sending message"
                 : "Email sent successfully"}
-          </Typography>
+          </h1>
           <Button
-            className="mt-4 w-full"
+            className="mt-4"
             onClick={() => {
               setShowModal(false);
               setStatus("idle");
