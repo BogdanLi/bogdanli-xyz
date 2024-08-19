@@ -32,7 +32,7 @@ const ProfessionalInfoSidebar = () => {
           </FolderLink>
         </div>
       </FolderDropdown>
-      <FolderDropdown label="contacts">
+      <FolderDropdown label="contacts" defaultOpen>
         <div className="space-y-2 py-4">
           <Link
             href="mailto:li.bogdan44@gmail.com"
