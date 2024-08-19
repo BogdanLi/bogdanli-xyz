@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { Box, Modal } from "@mui/material";
 import { Button } from "../Buttons";
+import { BeatLoader } from "react-spinners";
 
 const getHtml = (subject: string, text: string, name: string, from: string) => {
   return `
@@ -19,7 +20,7 @@ const getHtml = (subject: string, text: string, name: string, from: string) => {
   </head>
   <body>
     <div style="color: '#011627'; border: '1px solid #011627'; border-radius: '24px';">
-      <h2>From: ${name}, Email: ${from}</h2>
+      <h2>From: ${name}</h2>
       <h2>Email: ${from}</h2>
       <h2>Subject: ${subject}</h2>
       <h2>${text}</h2>
@@ -134,7 +135,13 @@ const ContactForm = () => {
             className="rounded-lg border border-secondary-100 bg-primary-300 px-4 py-2 text-secondary-100"
           />
         </label>
-        <Button>submit-message</Button>
+        <Button>
+          {status === "sending" ? (
+            <BeatLoader color="#607B96" />
+          ) : (
+            "submit-message"
+          )}
+        </Button>
       </form>
     </>
   );

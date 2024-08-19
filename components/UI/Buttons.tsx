@@ -82,6 +82,7 @@ interface ButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
+  variant?: "primary" | "default" | "ghost";
 }
 
 export const Button = ({
@@ -89,11 +90,12 @@ export const Button = ({
   disabled = false,
   onClick,
   className = "",
+  variant = "default",
 }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`rounded-lg bg-lines px-3 py-2 text-white ${className}`}
+      className={`rounded-lg px-3 py-2 text-white ${variant === "primary" ? "bg-[#FEA55F] text-[#01080E] hover:bg-[#e8b174]" : variant === "default" ? "bg-lines text-white hover:bg-[#2f394f]" : variant === "ghost" ? "rounded-lg border border-white text-white hover:border-opacity-70" : ""} ${className}`}
       disabled={disabled}
     >
       {children}
