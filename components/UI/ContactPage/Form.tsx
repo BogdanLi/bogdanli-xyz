@@ -132,7 +132,7 @@ const ContactForm = () => {
             disabled={status === "sending"}
             {...register("message")}
             placeholder="What you want say to me"
-            className="rounded-lg border border-secondary-100 bg-primary-300 px-4 py-2 text-secondary-100"
+            className="rounded-lg border border-secondary-100 bg-primary-300 px-4 py-2 text-secondary-100 outline-none focus:border-secondary-300"
           />
         </label>
         <Button>

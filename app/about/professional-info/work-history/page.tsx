@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const WorkHistoryPage = () => {
   return (
-    <div className="w-full">
-      <CodeTemplate lines={16} name="history.js">
+    <div className="w-full overflow-y-scroll">
+      <CodeTemplate lines={28} name="history.js">
         <div>
           <div>
             <Link
@@ -107,7 +107,43 @@ const WorkHistoryPage = () => {
           <p>
             <KeywordMarkdown>const</KeywordMarkdown>{" "}
             <NameMarkdown>timePeriod</NameMarkdown> ={" "}
-            <StringMarkdown>january 2024 - present</StringMarkdown>;
+            <StringMarkdown>january 2024 - october 2024</StringMarkdown>;
+          </p>
+        </div>
+        <div>{"//"}</div>
+        <div>
+          <div>
+            <Link
+              href={"https://technohub.tj/"}
+              target="_blank"
+              className="hover:text-[#01b695]"
+            >
+              Technohub Dushanbe;
+            </Link>
+          </div>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>position</NameMarkdown> ={" "}
+            <StringMarkdown>course instructor</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>type</NameMarkdown> ={" "}
+            <StringMarkdown>part time</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>timePeriod</NameMarkdown> ={" "}
+            <StringMarkdown>september 2024 - present</StringMarkdown>;
+          </p>
+          <p>
+            <KeywordMarkdown>const</KeywordMarkdown>{" "}
+            <NameMarkdown>coursesITaught</NameMarkdown> ={" "}
+            <ArrayMarkdown>
+              [<StringMarkdown>JS101</StringMarkdown>,{" "}
+              <StringMarkdown>Front-end Essentials</StringMarkdown>]
+            </ArrayMarkdown>
+            ;
           </p>
         </div>
       </CodeTemplate>

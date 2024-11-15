@@ -7,14 +7,18 @@ const ProfessionalMePage = () => {
         <div className="hidden lg:block">
           <div>
             {
-              "// Hey there! I'm a front-end dev who's been around the block with all sorts of JavaScript goodies. "
+              "// Hey there! I'm a web dev who's been around the block with all sorts of JavaScript goodies."
             }
           </div>
+          <div>{"// "}</div>
+          <div>{"// Sometimes did Front-end and sometimes did Back-end."}</div>
+          <div>{"// "}</div>
           <div>
             {
-              "// React.js is my jam, but I'm also pretty handy with TypeScript, Tailwind CSS, and Material UI."
+              "// React.js is my jam, but I'm also pretty handy with TypeScript, Tailwind CSS,"
             }
           </div>
+          <div>{"// and Material UI. Bit of Node.js and Express.js."}</div>
           <div>{"// "}</div>
           <div>
             {
@@ -48,9 +52,9 @@ const ProfessionalMePage = () => {
         <div className="overflow-y-scroll lg:hidden">
           <p>
             Hey there! I&apos;m a front-end dev who&apos;s been around the block
-            with all sorts of JavaScript goodies. React.js is my jam, but
-            I&apos;m also pretty handy with TypeScript, Tailwind CSS, and
-            Material UI.
+            with all sorts of JavaScript goodies. Sometimes did Front-end and
+            sometimes did Back-end. React.js is my jam, but I&apos;m also pretty
+            handy with TypeScript, Tailwind CSS. Bit of Node.js and Express.js.
           </p>
           <p>
             I&apos;ve worked on all kinds of projects and I&apos;m always pumped

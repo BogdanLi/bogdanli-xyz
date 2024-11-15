@@ -33,11 +33,18 @@ const HomePage = () => {
             <FadeInStagger>
               <h1 className="text-[62px]">Bogdan Li</h1>
             </FadeInStagger>
-            <FadeInStagger>
-              <p className="text-xl text-secondary-300 lg:text-[32px]">
-                {"> Front-end developer"}
-              </p>
-            </FadeInStagger>
+            <div className="space-y-4">
+              <FadeInStagger>
+                <p className="text-xl text-secondary-300 lg:text-[32px]">
+                  {"> Web developer &"}
+                </p>
+              </FadeInStagger>
+              <FadeInStagger>
+                <p className="text-xl text-secondary-200 lg:text-2xl">
+                  {"> Course Instructor"}
+                </p>
+              </FadeInStagger>
+            </div>
           </FadeIn>
           <FadeIn>
             <div className="space-y-2">

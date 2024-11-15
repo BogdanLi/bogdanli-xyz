@@ -27,11 +27,10 @@ const AboutMobileSidebar = () => {
         <FolderLink folderIcon={folder.src} label="bio">
           <FileLink label="me.tsx" href="/about/personal-info/me" />
         </FolderLink>
-        <FolderLink folderIcon={folderGreen.src} label="workBackground">
-          <FileLink
-            label="history.js"
-            href="/about/professional-info/work-history"
-          />
+      </FolderDropdown>
+      <FolderDropdown label="interests">
+        <FolderLink folderIcon={folder.src} label="anime">
+          <FileLink label="anime.tsx" href="/about/hobbies/anime" />
         </FolderLink>
       </FolderDropdown>
     </div>

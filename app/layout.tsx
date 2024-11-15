@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fira_Code, Inter } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/UI/Header";
 import Footer from "@/components/UI/Footer";
@@ -9,8 +9,27 @@ import { SidebarStoreProvider } from "@/lib/providers/sidebar-store-provider";
 const fira = Fira_Code({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Bogdan Li",
-  description: "React.js developer based in Dushanbe",
+  title: {
+    default: "Bogdan Li | Web Developer",
+    template: "%s | Bogdan Li",
+  },
+  description: "Experienced Web Developer and Course Instructor",
+  keywords: [
+    "react.js",
+    "html",
+    "javascript",
+    "typescript",
+    "web developer",
+    "projects",
+    "skills",
+  ],
+  openGraph: {
+    title: {
+      default: "Bogdan Li | Web Developer",
+      template: "%s | Bogdan Li",
+    },
+    description: "Experienced Web Developer and Course Instructor",
+  },
 };
 
 export default function RootLayout({

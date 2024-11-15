@@ -7,8 +7,6 @@ import linkedin from "@/assets/icons/linkedin.svg";
 import instagram from "@/assets/icons/instagram.svg";
 import telegram from "@/assets/icons/telegram.svg";
 import { useSidebarStore } from "@/lib/providers/sidebar-store-provider";
-import FadeIn from "./Animation/FadeIn";
-import FadeInStagger from "./Animation/FadeInStagger";
 
 const MobileSidebar = () => {
   const { show } = useSidebarStore((state) => state);
@@ -20,7 +18,7 @@ const MobileSidebar = () => {
       <div>
         <MobileNavLink href="/welcome" label="_hello" />
         <MobileNavLink href="/about" label="_about-me" />
-        <MobileNavLink href="/projects" label="_projects" />
+        {/* <MobileNavLink href="/projects" label="_projects" /> */}
         <MobileNavLink href="/contact" label="_contact-me" />
       </div>
       <div className="flex justify-between">

@@ -23,11 +23,11 @@ const links = [
     label: "_about-me",
     href: "/about",
   },
-  {
-    id: 4,
-    label: "_projects",
-    href: "/projects",
-  },
+  //   {
+  //     id: 4,
+  //     label: "_projects",
+  //     href: "/projects",
+  //   },
 ];
 
 const Header = () => {

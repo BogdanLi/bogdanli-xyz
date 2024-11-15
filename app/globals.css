@@ -14,3 +14,9 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #43d9ad #011627;
+  scrollbar-track-color: #011627;
+}
