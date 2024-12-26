@@ -22,6 +22,14 @@ export const metadata: Metadata = {
     "web developer",
     "projects",
     "skills",
+    "bogdan",
+    "bogdan li",
+    "tajikistan",
+    "dushanbe",
+    "course instructor",
+    "minds",
+    "mindstech",
+    "mindstech.io",
   ],
   openGraph: {
     title: {
@@ -39,6 +47,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={fira.className}>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          url: "https://www.bogdan-li.xyz/",
+          name: "Bogdan Li",
+          potentialAction: {
+            "@type": "SearchAction",
+            target:
+              "https://www.your-custom-domain.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string",
+          },
+        })}
+      </script>
       <body className="relative min-h-screen bg-primary-100 p-4 lg:h-screen lg:min-h-0 lg:p-16">
         <main className="flex h-screen flex-col overflow-y-scroll rounded-lg border border-lines bg-primary-200 lg:h-full lg:justify-between lg:overflow-y-hidden">
           <SidebarStoreProvider>

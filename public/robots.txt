@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.bogdan-li.xyz
+
+# Sitemaps
+Sitemap: https://www.bogdan-li.xyz/sitemap.xml
