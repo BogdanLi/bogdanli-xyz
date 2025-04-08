@@ -18,6 +18,24 @@ export const metadata: Metadata = {
   },
   description:
     "Portfolio of Bogdan Li — Front-End Developer specializing in React, Next.js. View projects, blog posts, and contact info.",
+  openGraph: {
+    title: {
+      default: "Bogdan Li Front-end Developer",
+      template: "%s | Bogdan Li",
+    },
+    description:
+      "Portfolio of Bogdan Li — Front-End Developer specializing in React, Next.js. View projects, blog posts, and contact info.",
+    images: [
+      {
+        url: "https://bogdan-li.xyz/OG.png",
+        width: 1200,
+        height: 630,
+        alt: "Image description",
+      },
+    ],
+    locale: "en",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
