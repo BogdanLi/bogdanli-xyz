@@ -6,7 +6,7 @@
     "^next",
     "",
     "lucide-react",
-    "^(@pics|@icons)[.*]$",
+    "^(@pics|@icons)(.*)$",
     "",
     "^(?!.*[.]css$)[./].*$",
     ".css$"

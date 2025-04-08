@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
+import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <main className="container mx-auto py-16 space-y-5">
           <Header /> {children}
+          <Footer />
         </main>
       </body>
     </html>
