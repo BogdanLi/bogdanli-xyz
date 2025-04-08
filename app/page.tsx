@@ -115,7 +115,7 @@ export default function Home() {
           </div>
 
           <div className="relative min-w-72 aspect-[15/11] group-hover:scale-125 transition-all duration-300">
-            <Image src={resume.src} alt={"resume"} fill />
+            <Image src={resume.src} alt={"resumes"} fill />
           </div>
         </a>
       </section>

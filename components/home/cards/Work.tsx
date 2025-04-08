@@ -36,13 +36,13 @@ const mock: IWork[] = [
 
 export default function Work() {
   return (
-    <article className="card col-span-2 row-span-3 space-y-12">
+    <article className="card col-span-2 row-span-3 space-y-16">
       <h2 className="text-secondary-text text-2xl font-medium flex items-center gap-2">
         <div className="bg-secondary-text w-2.5 h-2.5 rounded-full" />
         Recent Work
       </h2>
 
-      <div className="flex flex-col-reverse gap-4">
+      <div className="flex flex-col-reverse gap-12">
         {mock.map((work, index) => (
           <div className="flex justify-between items-center">
             <div className="space-y-3">
