@@ -1,0 +1,14 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-imports"],
+  "importOrder": [
+    "^react$",
+    "",
+    "^next",
+    "",
+    "lucide-react",
+    "^(@pics|@icons)[.*]$",
+    "",
+    "^(?!.*[.]css$)[./].*$",
+    ".css$"
+  ]
+}
