@@ -9,6 +9,7 @@ import mindslinks from "@pics/mindslinks.png";
 import mistral from "@pics/mistral.png";
 import pfp from "@pics/pfp.jpg";
 import resume from "@pics/resume.png";
+import JsonLd from "@/components/json-ld";
 
 export default function Home() {
   return (
@@ -25,9 +26,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse sm:flex-row items-start gap-8 sm:items-end justify-between">
+        <div className="flex flex-col-reverse items-start justify-between gap-8 sm:flex-row sm:items-end">
           <article>
-            <h1 className="mb-2.5 sm:mb-4 text-2xl sm:text-4xl font-semibold">I'm Bogdan Li</h1>
+            <h1 className="mb-2.5 text-2xl font-semibold sm:mb-4 sm:text-4xl">
+              I'm Bogdan Li
+            </h1>
             <p className="text-secondary-text mb-4 sm:mb-7 sm:w-1/2 sm:text-xl">
               I develop web apps with stunning ui and teach people programming
             </p>
@@ -43,19 +46,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-6 gap-5">
+      <section className="grid grid-cols-2 gap-5 sm:grid-cols-4 sm:grid-rows-6">
         <Work />
 
         <Service />
 
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "mindslinks",
+            description: "Linktree alternative for mindstech.io",
+            image: "https://bogdan-li.xyz/pics/mindslinks.png",
+            datePublished: new Date("09-04-2025"),
+            dateModified: new Date("09-04-2025"),
+            author: {
+              "@type": "Person",
+              name: "Bogdan Li",
+            },
+          }}
+        />
         <a
           href="https://github.com/BogdanLi/mindslinks"
           target="_blank"
-          className="card group col-span-2 sm:row-span-2 flex flex-col justify-between"
+          className="card group col-span-2 flex flex-col justify-between sm:row-span-2"
         >
           <div className="flex items-center justify-between">
             <div className="space-y-2 sm:space-y-4">
-              <p className="sm:text-2xl font-semibold">mindslinks</p>
+              <p className="font-semibold sm:text-2xl">mindslinks</p>
               <p className="text-secondary-text text-xs sm:text-xl">
                 Linktree alternative for mindstech.io
               </p>
@@ -71,6 +89,22 @@ export default function Home() {
           </div>
         </a>
 
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Le Chat Mistral",
+            description:
+              "Application for your browser that uses AI to make your experience better.",
+            image: "https://bogdan-li.xyz/pics/mistral.png",
+            datePublished: new Date("09-04-2025"),
+            dateModified: new Date("09-04-2025"),
+            author: {
+              "@type": "Person",
+              name: "Bogdan Li",
+            },
+          }}
+        />
         <a
           href="https://github.com/BogdanLi/mindslinks"
           target="_blank"
@@ -78,8 +112,8 @@ export default function Home() {
         >
           <div className="flex items-center justify-between">
             <div className="space-y-2 sm:space-y-4">
-              <p className="sm:text-2xl font-semibold">Le Chat Mistral</p>
-              <p className="text-secondary-text sm:w-2/3 text-xs sm:text-xl">
+              <p className="font-semibold sm:text-2xl">Le Chat Mistral</p>
+              <p className="text-secondary-text text-xs sm:w-2/3 sm:text-xl">
                 Application for your browser that uses AI to make your
                 experience better.
               </p>
@@ -95,6 +129,21 @@ export default function Home() {
           </div>
         </a>
 
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "React Resume",
+            description: "Web verison of resume powered by React and Supabase",
+            image: "https://bogdan-li.xyz/pics/resume.png",
+            datePublished: new Date("09-04-2025"),
+            dateModified: new Date("09-04-2025"),
+            author: {
+              "@type": "Person",
+              name: "Bogdan Li",
+            },
+          }}
+        />
         <a
           href="https://github.com/BogdanLi/mindslinks"
           target="_blank"
@@ -102,8 +151,8 @@ export default function Home() {
         >
           <div className="flex items-center justify-between">
             <div className="space-y-2 sm:space-y-4">
-              <p className="sm:text-2xl font-semibold">Web Resume</p>
-              <p className="text-secondary-text sm:w-2/3 text-xs sm:text-xl">
+              <p className="font-semibold sm:text-2xl">Web Resume</p>
+              <p className="text-secondary-text text-xs sm:w-2/3 sm:text-xl">
                 Web verison of resume powered by React and Supabase
               </p>
             </div>

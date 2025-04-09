@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   },
   description:
     "Portfolio of Bogdan Li — Front-End Developer specializing in React, Next.js. View projects, blog posts, and contact info.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Bogdan Li",
+    description:
+      "Portfolio of Bogdan Li — Front-End Developer specializing in React, Next.js. View projects, blog posts, and contact info.",
+    images: ["https://bogdan-li.xyz/OG.png"],
+  },
   openGraph: {
     title: {
       default: "Bogdan Li Front-end Developer",
@@ -30,11 +37,12 @@ export const metadata: Metadata = {
         url: "https://bogdan-li.xyz/OG.png",
         width: 1200,
         height: 630,
-        alt: "Image description",
+        alt: "Bogdan Li",
       },
     ],
     locale: "en",
     type: "website",
+    url: "https://bogdan-li.xyz",
   },
 };
 
