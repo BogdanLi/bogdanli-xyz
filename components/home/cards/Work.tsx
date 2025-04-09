@@ -36,28 +36,36 @@ const mock: IWork[] = [
 
 export default function Work() {
   return (
-    <article className="card col-span-2 row-span-3 space-y-16">
-      <h2 className="text-secondary-text text-2xl font-medium flex items-center gap-2">
-        <div className="bg-secondary-text w-2.5 h-2.5 rounded-full" />
+    <article className="card col-span-2 space-y-9 sm:row-span-3 sm:space-y-16">
+      <h2 className="text-secondary-text flex items-center gap-2 font-medium sm:text-2xl">
+        <div className="bg-secondary-text h-2.5 w-2.5 rounded-full" />
         Recent Work
       </h2>
 
       <div className="flex flex-col-reverse gap-12">
         {mock.map((work, index) => (
-          <div className="flex justify-between items-center">
+          <div key={work.date} className="flex items-center justify-between">
             <div className="space-y-3">
               <p
                 className={cn(
-                  "font-medium text-2xl",
+                  "w-fit font-medium sm:text-2xl",
                   index === mock.length - 1 ? "text-red-cta font-medium" : "",
                 )}
               >
                 {work.position}
               </p>
-              <p className="text-secondary-text text-xl">{work.date}</p>
+              <p className="text-secondary-text hidden sm:block sm:text-xl">
+                {work.date}
+              </p>
+              <div className="text-secondary-text sm:hidden">
+                <p>{work.date.split("-")[0]}</p>
+                <p>{work.date.split("-")[1]}</p>
+              </div>
             </div>
 
-            <p className="text-xl text-secondary">{work.company}</p>
+            <p className="text-secondary w-fit text-end sm:text-xl">
+              {work.company}
+            </p>
           </div>
         ))}
       </div>

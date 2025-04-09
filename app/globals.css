@@ -126,6 +126,6 @@
   }
 
   .card {
-    @apply bg-gray border-light-gray rounded-2xl border-2 px-11 py-14;
+    @apply border-light-gray bg-gray rounded-2xl border-2 px-11 py-14;
   }
 }

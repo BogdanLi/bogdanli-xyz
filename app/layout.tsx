@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <main className="container mx-auto py-16 space-y-5">
+        <main className="container mx-auto space-y-5 px-6 py-6 sm:px-0 sm:py-16">
           <Header /> {children}
           <Footer />
         </main>

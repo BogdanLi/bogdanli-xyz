@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 import logo from "@icons/logo.svg";
 
-import Image from "next/image";
 import NavLink from "./NavLink";
+import { Menu } from "lucide-react";
 
 const links = [
   { href: "/", label: "ABOUT" },
@@ -12,13 +14,17 @@ const links = [
 export default function Header() {
   return (
     <header className="flex">
-      <div className="rounded-full p-3 bg-gray w-fit border-2 border-light-gray">
+      <div className="border-light-gray bg-gray rounded-full border-2 p-2 sm:p-3">
         <Image src={logo.src} width={40} height={40} alt="abstract logo" />
       </div>
-      <nav className="bg-gray grow rounded-full items-center px-16 w-fit border-2 border-light-gray flex justify-between text-xl">
+      <nav className="border-light-gray bg-gray flex w-fit grow items-center justify-between rounded-full border-2 px-4 text-xl sm:px-16">
         {links.map((link) => (
           <NavLink key={link.href} {...link} />
         ))}
+
+        <button className="sm:hidden">
+          <Menu />
+        </button>
       </nav>
     </header>
   );

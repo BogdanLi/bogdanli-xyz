@@ -2,10 +2,10 @@ import GradientCard from "../GradientCard";
 
 export default function Footer() {
   return (
-    <GradientCard variant="bl">
-      <footer className="flex items-center justify-between w-full px-11">
+    <GradientCard variant="bl" style="h-fit sm:h-auto">
+      <footer className="flex w-full flex-col-reverse items-center justify-between gap-6 px-11 sm:flex-row">
         <p className="text-2xl font-medium">Bogdan Li</p>
-        <div className="text-xl flex gap-3 items-center">
+        <div className="flex items-center gap-3 text-xl">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/li-bogdan/"
@@ -28,8 +28,8 @@ export default function Footer() {
             Github
           </a>
         </div>
-        <div className="bg-dark text-sm font-medium px-4 py-1 rounded-full flex gap-2.5 items-center border border-light-gray">
-          <div className="bg-red-cta w-2.5 h-2.5 rounded-full" />
+        <div className="border-light-gray bg-dark flex items-center gap-2.5 rounded-full border px-4 py-1 text-sm font-medium">
+          <div className="bg-red-cta h-2.5 w-2.5 rounded-full" />
           AVAILABLE FOR JOB
         </div>
       </footer>

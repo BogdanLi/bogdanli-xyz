@@ -16,26 +16,26 @@ export default function CTA() {
   }, [showTooltip]);
 
   return (
-    <div className="flex gap-3 items-center ">
-      <button className="flex bg-red-cta border border-dark rounded-xl shadow-[0px_4px_16px] shadow-red-cta cursor-pointer">
-        <p className="py-3 px-2">Hire me</p>
-        <div className="py-3 px-2 border-l border-dark">
-          <Plus className="w-6 h-6" />
+    <div className="flex items-center gap-3 text-xs sm:text-base">
+      <button className="border-dark bg-red-cta shadow-red-cta flex cursor-pointer rounded-xl border shadow-[0px_4px_16px]">
+        <p className="px-2 py-3">Hire me</p>
+        <div className="border-dark border-l px-2 py-3">
+          <Plus className="h-6 w-6" />
         </div>
       </button>
       <button
-        className="flex bg-gray border border-light-gray rounded-xl cursor-pointer relative"
+        className="border-light-gray bg-gray relative flex cursor-pointer rounded-xl border"
         onClick={() => {
           navigator.clipboard.writeText("li.bogdan74@gmail.com");
           setShowTooltip(true);
         }}
       >
-        <p className="py-3 px-2">Copy Email</p>
-        <div className="py-3 px-2 border-l border-light-gray">
-          <Copy className="w-6 h-6" />
+        <p className="px-2 py-3">Copy Email</p>
+        <div className="border-light-gray border-l px-2 py-3">
+          <Copy className="h-6 w-6" />
         </div>
         {showTooltip && (
-          <span className="absolute left-0 -bottom-full bg-gray p-2 rounded-xl border border-light-gray">
+          <span className="border-light-gray bg-gray absolute -bottom-full left-0 rounded-xl border p-2">
             Email copied
           </span>
         )}

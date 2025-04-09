@@ -15,7 +15,7 @@ export default function NavLink({ href, label }: Props) {
 
   return (
     <Link
-      className={cn(path === href ? "text-red-secondary font-bold" : "")}
+      className={cn(path === href ? "text-red-secondary font-bold" : "hidden")}
       href={href}
     >
       {label}
